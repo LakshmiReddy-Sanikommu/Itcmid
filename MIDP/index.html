@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Choose Your Adventure</title>
+</head>
+<body>
+    <header>
+        <h1>Choose Your Adventure</h1>
+    </header>
+    <main>
+        <div id="story"></div>
+        <div id="choices"></div>
+        <div id="image-container">
+            <img id="story-image" src="">
+            <img id="story-image2" src="">
+        </div>
+    </main>
+    <footer>
+        <h1>Addendum</h1>
+        <P>This code defines a text-based choose-your-own-adventure game using JavaScript. The game is structured as a series of interconnected story stages with choices and consequences, leading to different outcomes. Here's an overview of the code: </P>
+        <p><strong>Story Stages:</strong></p>
+    <p>The game's narrative is organized into stages, each represented as an object in the <code>storyStages</code> constant. Each stage has the following properties:</p>
+    <ul>
+        <li><code>text:</code> A description of the current situation or narrative at that stage.</li>
+        <li><code>choices:</code> An array of choices available to the player at that stage.</li>
+        <li><code>consequences:</code> An array representing the consequences of each choice. The order of choices and consequences should match.</li>
+        <li><code>image and image2:</code> URLs pointing to images associated with the current stage.</li>
+    </ul>
+
+    <p><strong>Game Functions:</strong></p>
+    <ul>
+        <li><code>startGame():</code></li>
+        <ul>
+            <li>Resets the game by setting the <code>currentStage</code> to the starting stage ("start").</li>
+            <li>Calls the <code>updatePage()</code> function to display the starting stage on the webpage.</li>
+        </ul>
+        <li><code>updatePage():</code></li>
+        <ul>
+            <li>Retrieves the current stage information based on <code>currentStage</code>.</li>
+            <li>Updates the webpage with the current stage's text and choices.</li>
+            <li>Displays images associated with the current stage.</li>
+        </ul>
+        <li><code>makeChoice(choiceIndex):</code></li>
+        <ul>
+            <li>Handles the player's choice.</li>
+            <li>Retrieves the current stage and determines the next stage based on the player's choice.</li>
+            <li>Updates the <code>currentStage</code> and calls <code>updatePage()</code> to continue the game.</li>
+        </ul>
+    </ul>
+
+    <p><strong>Game Initialization:</strong></p>
+    <ul>
+        <li><code>currentStage:</code> A variable to keep track of the current stage.</li>
+        <li>Calls <code>startGame()</code> to initialize and display the starting stage when the script runs.</li>
+    </ul>
+
+    <p><strong>HTML Integration:</strong></p>
+    <p>Assumes there is HTML with elements having the IDs: <code>"story"</code>, <code>"choices"</code>, <code>"story-image"</code>, and <code>"story-image2"</code>. These elements are updated dynamically as the game progresses.</p>
+
+    <p><strong>How to Play:</strong></p>
+    <ul>
+        <li>The player starts at the "start" stage and makes choices to navigate through the story.</li>
+        <li>Choices lead to consequences, which determine the next stage.</li>
+        <li>Images are displayed to enhance the storytelling experience.</li>
+    </ul>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
